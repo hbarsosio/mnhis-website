@@ -369,7 +369,7 @@ nav {
 .hero-visual {
     position: absolute;
     right: 6%;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     animation: fadeInUp 0.8s ease 0.3s forwards;
     opacity: 0;
@@ -381,24 +381,23 @@ nav {
 }
 
 .hero-carousel-title {
-    margin-bottom: 1.25rem;
-    text-align: right;
-    padding-right: 0.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .hero-carousel-title .carousel-tag {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-accent);
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
 }
 
 .hero-carousel-title h3 {
     font-family: var(--font-display);
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     color: var(--color-primary);
     font-weight: 400;
     margin: 0;
