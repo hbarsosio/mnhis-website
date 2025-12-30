@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact MNHIS - Get in touch with Kenya's leading pregnancy research group for partnerships, collaborations, and inquiries.">
+    <title>Contact Us | MNHIS - Kenya's Pregnancy Research Centre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="MNHIS Logo" style="height: 50px; width: auto; object-fit: contain;">
+            <span class="logo-text">MNHIS<span>.</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="projects.html" class="dropdown-toggle">Research</a>
+                <div class="dropdown-menu">
+                    <a href="projects.html">All Projects</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="projects.html#malaria">🦟 Malaria in Pregnancy</a>
+                    <a href="projects.html#immunization">💉 Maternal Immunization</a>
+                    <a href="projects.html#health-systems">🏥 Health Systems</a>
+                    <a href="projects.html#adolescent">💚 Adolescent Well-being</a>
+                </div>
+            </li>
+            <li><a href="news.html">News & Events</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="join.html" class="nav-cta">Join Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <span class="section-tag">Contact Us</span>
+            <h1>Get in Touch</h1>
+            <p class="page-description">We welcome collaboration with researchers, policymakers, and organizations committed to improving maternal and newborn health outcomes.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h4>Location</h4>
+                        <p>KEMRI Centre for Global Health Research<br>Kisumu, Kenya</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:hbarsosio@kemri.go.ke">hbarsosio@kemri.go.ke</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🔗</span>
+                    <div>
+                        <h4>Social</h4>
+                        <p>
+                            <a href="https://www.linkedin.com/in/dr-hellen-barsosio-14771a26" target="_blank">LinkedIn</a> · 
+                            <a href="https://twitter.com/KEMRI_Kenya" target="_blank">Twitter/X</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-types">
+                    <h3>How Can We Help?</h3>
+                    <div class="contact-type">
+                        <h4>Research Partnerships</h4>
+                        <p>Interested in collaborating on maternal, newborn, or adolescent health research in Kenya.</p>
+                    </div>
+                    <div class="contact-type">
+                        <h4>Funding Inquiries</h4>
+                        <p>Learn about funding opportunities and how to support our research programs.</p>
+                    </div>
+                    <div class="contact-type">
+                        <h4>Media & Press</h4>
+                        <p>Interview requests, press inquiries, and media partnerships.</p>
+                    </div>
+                    <div class="contact-type">
+                        <h4>Career Opportunities</h4>
+                        <p>Join our team of researchers and health professionals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message! We will be in touch soon.');">
+                <h3>Send Us a Message</h3>
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic</option>
+                        <option value="partnership">Research Partnership</option>
+                        <option value="funding">Funding Inquiry</option>
+                        <option value="media">Media & Press</option>
+                        <option value="careers">Career Opportunities</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="MNHIS Logo" style="height: 45px; width: auto; object-fit: contain;">
+                <span class="logo-text">MNHIS<span>.</span></span>
+            </a>
+            <p class="footer-tagline">Kenya's Pregnancy Research Centre of Excellence</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="projects.html">Research</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="collaborators.html">Collaborators</a></li>
+            <li><a href="partner.html">Partner</a></li>
+            <li><a href="join.html">Join Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="copyright">© 2025 MNHIS Research Group, KEMRI-LSTM Collaboration. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('mobile-open');
+        });
+    </script>
+</body>
+</html>
