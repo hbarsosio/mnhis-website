@@ -104,24 +104,91 @@
     <section class="funders-section">
         <p class="funders-label">Funded and Supported By</p>
         <div class="funders-logos">
-            <a href="https://www.gatesfoundation.org" target="_blank" class="funder-logo" title="Bill & Melinda Gates Foundation">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bill_%26_Melinda_Gates_Foundation_logo.svg/320px-Bill_%26_Melinda_Gates_Foundation_logo.svg.png" alt="Gates Foundation">
+            <a href="https://www.gatesfoundation.org" target="_blank" class="funder-logo-text" title="Bill & Melinda Gates Foundation">
+                <span class="funder-name">Bill & Melinda Gates Foundation</span>
             </a>
-            <a href="https://www.ukri.org/councils/mrc/" target="_blank" class="funder-logo" title="Medical Research Council UK">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/UK_Research_and_Innovation_logo.svg/200px-UK_Research_and_Innovation_logo.svg.png" alt="UKRI MRC">
+            <a href="https://www.ukri.org/councils/mrc/" target="_blank" class="funder-logo-text" title="Medical Research Council UK">
+                <span class="funder-name">UKRI MRC</span>
             </a>
-            <a href="https://www.nihr.ac.uk" target="_blank" class="funder-logo" title="NIHR">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/NIHR_logo.svg/200px-NIHR_logo.svg.png" alt="NIHR">
+            <a href="https://www.nihr.ac.uk" target="_blank" class="funder-logo-text" title="NIHR">
+                <span class="funder-name">NIHR</span>
             </a>
-            <a href="https://www.edctp.org" target="_blank" class="funder-logo" title="EDCTP">
-                <img src="https://www.edctp.org/web/app/uploads/2020/01/EDCTP_logo.png" alt="EDCTP">
+            <a href="https://www.edctp.org" target="_blank" class="funder-logo-text" title="EDCTP">
+                <span class="funder-name">EDCTP</span>
             </a>
-            <a href="https://www.mmv.org" target="_blank" class="funder-logo" title="Medicines for Malaria Venture">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Medicines_for_Malaria_Venture_Logo.svg/200px-Medicines_for_Malaria_Venture_Logo.svg.png" alt="MMV">
+            <a href="https://www.mmv.org" target="_blank" class="funder-logo-text" title="Medicines for Malaria Venture">
+                <span class="funder-name">MMV</span>
             </a>
-            <a href="https://www.stanford.edu" target="_blank" class="funder-logo" title="Stanford University">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/150px-Seal_of_Leland_Stanford_Junior_University.svg.png" alt="Stanford">
+            <a href="https://www.stanford.edu" target="_blank" class="funder-logo-text" title="Stanford University">
+                <span class="funder-name">Stanford University</span>
             </a>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Carousel -->
+    <section class="gallery-section">
+        <div class="section-header centered">
+            <span class="section-tag">Our Work in Action</span>
+            <h2 class="section-title">From the Field</h2>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <!-- Replace these placeholder images with your actual photos -->
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <span>📷</span>
+                            <p>Add your photo here</p>
+                            <small>gallery-1.jpg</small>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <span>📷</span>
+                            <p>Add your photo here</p>
+                            <small>gallery-2.jpg</small>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <span>📷</span>
+                            <p>Add your photo here</p>
+                            <small>gallery-3.jpg</small>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <span>📷</span>
+                            <p>Add your photo here</p>
+                            <small>gallery-4.jpg</small>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <span>📷</span>
+                            <p>Add your photo here</p>
+                            <small>gallery-5.jpg</small>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-placeholder">
+                            <span>📷</span>
+                            <p>Add your photo here</p>
+                            <small>gallery-6.jpg</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+            <span class="dot" onclick="goToSlide(5)"></span>
         </div>
     </section>
 
@@ -221,6 +288,37 @@
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('mobile-open');
         });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            const track = document.querySelector('.carousel-track');
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => moveCarousel(1), 5000);
     </script>
 </body>
 </html>
