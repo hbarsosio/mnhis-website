@@ -369,7 +369,7 @@ nav {
 .hero-visual {
     position: absolute;
     right: 6%;
-    top: 42%;
+    top: 35%;
     transform: translateY(-50%);
     animation: fadeInUp 0.8s ease 0.3s forwards;
     opacity: 0;
