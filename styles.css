@@ -599,14 +599,15 @@ section {
 }
 
 .funder-logo {
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 2rem;
     background: var(--color-bg);
     border-radius: var(--radius-md);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70px;
+    min-height: 90px;
+    min-width: 160px;
 }
 
 .funder-logo:hover {
@@ -616,10 +617,10 @@ section {
 }
 
 .funder-logo img {
-    max-height: 45px;
+    max-height: 70px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(20%);
+    filter: grayscale(10%);
     transition: filter 0.3s ease;
 }
 
